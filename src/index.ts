@@ -15,6 +15,7 @@ const init = async (): Promise<void> => {
         applicationName: process.env[EnvironmentEnums.APP_NAME],
         twilioSid: process.env[EnvironmentEnums.TWILIO_SID],
         twilioAuthToken: process.env[EnvironmentEnums.TWILIO_AUTH_TOKEN],
+        workers: 80, // Optional: (Default 100) defines how many tasks (http connections + your async callback if passed) will execute at one time
     });
 
     /**
