@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "module": "commonjs",
+    "sourceMap": true,
+    "allowJs": true,
+    "target": "es2020",
+    "esModuleInterop": true,
+    "baseUrl": "src",
+    "outDir": "./dist",
+    "incremental": true,
+    "allowSyntheticDefaultImports": true,
+    "declaration": true
+  },
+  "files": [
+    "src/index.ts"
+  ],
+  "ts-node": {
+    "files": true
+  },
+  "include": [
+    "src",
+  ],
+  "exclude": [
+    "dist",
+    "tests"
+  ],
+}
