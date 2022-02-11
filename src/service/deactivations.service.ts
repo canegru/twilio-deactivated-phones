@@ -68,6 +68,8 @@ class DeactivationService {
                 date: humanDate,
                 data: execute ? 'processed in execute statement' : numbers,
             };
+        } catch (error) {
+            throw new Error(error);
         } finally {
             this.workerPool.release();
         }
