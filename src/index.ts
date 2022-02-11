@@ -18,11 +18,10 @@ const init = async (): Promise<void> => {
         workers: 80, // Optional: (Default 100) defines how many tasks (http connections + your async callback if passed) will execute at one time
     });
 
-    /**
-    * write your code here to read from source and find the last pulled date and set start/end date
-    */
-    if (!fs.stat('./data')) {
-        fs.mkdir('./data');
+    try {
+        await fs.access('./data');
+    } catch (error) {
+        fs.mkdir('./data/');
     }
 
     await deactivations.fetchByDateSpan(

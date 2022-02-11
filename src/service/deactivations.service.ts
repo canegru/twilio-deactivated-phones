@@ -41,7 +41,7 @@ class DeactivationService {
         execute: (humanDate: DisconnectedNumbersData['date'], numbers: string[]) => Promise<void>,
     ): Promise<DisconnectedNumbersData[]> => {
         const dates = [];
-        for (let q = startDate; q <= endDate; q = new Date(q.getTime() + (24 * 60 * 60 * 1000))) {
+        for (let q = startDate; q <= endDate; q = new Date(q.getTime() + 8.64e+7)) {
             dates.push(q);
         }
 
