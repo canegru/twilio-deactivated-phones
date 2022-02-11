@@ -72,6 +72,8 @@ class DeactivationService {
             this.workerPool.release();
         }
     }
+
+    public getTwilio = (): Twilio => this.client
 }
 
 export default DeactivationService;

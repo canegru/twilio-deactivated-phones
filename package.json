@@ -2,13 +2,14 @@
   "name": "twilio-deactivated-phones",
   "version": "1.0.0",
   "description": "",
-  "main": "src/main.ts",
+  "main": "src/index.ts",
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "tsc",
     "start": "ts-node-dev src/index.ts",
     "lint": "eslint src --ext .ts --ext .tsx --ext .js --ext .jsx --max-warnings=0",
-    "lint:fix": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\" && eslint src --ext .ts --ext .tsx --ext .js --ext .jsx --fix"
+    "lint:fix": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\" && eslint src --ext .ts --ext .tsx --ext .js --ext .jsx --fix",
+    "test": "nyc --reporter=lcov --reporter=text-summary mocha"
   },
   "keywords": [],
   "author": "",
@@ -22,7 +23,6 @@
     "@types/sinon": "^10.0.2",
     "@typescript-eslint/eslint-plugin": "^4.28.1",
     "@typescript-eslint/parser": "^4.28.1",
-    "chai": "^4.3.4",
     "chai-as-promised": "^7.1.1",
     "eslint": "^7.29.0",
     "eslint-config-airbnb-base": "^14.2.1",
@@ -45,6 +45,7 @@
     "webpack-node-externals": "^3.0.0"
   },
   "dependencies": {
+    "chai": "^4.3.4",
     "async-sema": "^3.1.1",
     "axios": "^0.25.0",
     "bunyan": "^1.8.15",
