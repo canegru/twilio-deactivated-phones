@@ -18,15 +18,15 @@ const init = async (): Promise<void> => {
     });
 
     /**
-    * write your code here to read from source and find the last pulled date
+    * write your code here to read from source and find the last pulled date and set start/end date
     */
     if (!fs.stat('./data')) {
         fs.mkdir('./data');
     }
 
     await deactivations.fetchByDateSpan(
-        new Date('2020-09-05'),
-        new Date('2022-02-02'),
+        new Date('2020-09-05'), // start date
+        new Date('2022-02-02'), // end date
         async (date, data) => {
             /**
             * write to db code, the reason this function is required as a passthrough
