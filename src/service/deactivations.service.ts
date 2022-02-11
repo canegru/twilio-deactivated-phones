@@ -28,7 +28,7 @@ class DeactivationService {
     }: DeactivationListConfiguration) {
         this.client = twilio(twilioSid, twilioAuthToken);
         this.request = axios.create({
-            headers: { 'X-Custom-Header': applicationName },
+            headers: { 'X-Application-Name': applicationName },
         });
         this.workerPool = new Sema(workers);
 
