@@ -23,6 +23,12 @@ $ cat .env.template > .env
 $ npm start
 ```
 
+### Tests
+
+```shell
+$ npm run test
+```
+
 ### Building
 
 ```shell
